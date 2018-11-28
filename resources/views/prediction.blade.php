@@ -54,9 +54,13 @@
                   </label>
                 </div>
  
-                <div class="col-md-12">
-                  <button type="button" class="btn btn-skin pull-right" id="predict">
-                            predict</button>
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-skin pull-left" id="predict">
+                            predict genre</button>
+                </div>
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-skin pull-left" id="predictEmosi">
+                            predict emosi</button>
                 </div>
               </div>
 
@@ -80,6 +84,28 @@
                       $.ajax({
                         type: "POST",
                         url:"https://nlp-a.herokuapp.com/input/task",
+                        data:'{"text":"'+text+'"}',
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: "json",
+                        success:function(data){
+                          console.log(data);
+                          var dataTemp=data['message'];
+                          $('#predictData').append(dataTemp);
+                          $('#predictDataRes').val(dataTemp);
+                        }
+                      });
+                    });
+                    $('#predictEmosi').click(function(){
+                      $('#predictData').empty();
+                      var text=$('#Text_spam').val();
+                      
+                      /*$.get('predict',function(data){
+                        $('#predictData').append(data);
+                        console.log(data);
+                      });*/
+                      $.ajax({
+                        type: "POST",
+                        url:"https://nlp-emosi-webservice.herokuapp.com/input/task",
                         data:'{"text":"'+text+'"}',
                         contentType: 'application/json; charset=utf-8',
                         dataType: "json",
@@ -180,25 +206,25 @@
             <h5>Main Office</h5>
 
             <address>
-				  <strong>Squas Design, Inc.</strong><br>
-				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
-				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
-				</address>
+      <strong>Squas Design, Inc.</strong><br>
+      Tower 795 Folsom Ave, Beautiful Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
 
             <address>
-				  <strong>Email</strong><br>
-				  <a href="mailto:#">email.name@example.com</a>
-				</address>
+      <strong>Email</strong><br>
+      <a href="mailto:#">email.name@example.com</a>
+    </address>
             <address>
-				  <strong>We're on social networks</strong><br>
-                       	<ul class="company-social">
+      <strong>We're on social networks</strong><br>
+                        <ul class="company-social">
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
-				</address>
+    </address>
 
           </div>
         </div>
