@@ -38,6 +38,7 @@
             </div>
           </div>
         </div>
+        
         <div class="col-md-3">
           <div class="wow bounceInUp" data-wow-delay="0.5s">
             <div class="team boxed-grey">
@@ -50,6 +51,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-3">
           <div class="wow bounceInUp" data-wow-delay="0.8s">
             <div class="team boxed-grey">
@@ -62,6 +64,33 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-3">
+          <div class="wow bounceInUp" data-wow-delay="0.8s">
+            <div class="team boxed-grey">
+              <div class="inner">
+                <h5>Stefanus ray ameniawan (150708605)</h5>
+                <p class="subtitle">Data Analyst</p>
+                <div class="avatar"><img src="/ML/img/animal.jpg" alt="" class="img-responsive img-circle" /></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="wow bounceInUp" data-wow-delay="0.8s">
+            <div class="team boxed-grey">
+              <div class="inner">
+                <h5>Denhaningrat Alensana(150708527)</h5>
+                <p class="subtitle">Web Developer</p>
+                <div class="avatar"><img src="/ML/img/animal.jpg" alt="" class="img-responsive img-circle" /></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
